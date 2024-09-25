@@ -1,0 +1,16 @@
+{
+  "name": "youtube_playlist_crawler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "crawlee": "^3.11.4",
+    "playwright": "^1.47.2"
+  }
+}
