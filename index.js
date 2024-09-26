@@ -9,12 +9,15 @@ const crawler = new PlaywrightCrawler({
       "ytd-playlist-video-renderer",
       (videoDiv) => {
         const videoDetail = videoDiv.map((video) => {
-          const videoTitle = video.querySelector(
-            "div#content > div#container > div#meta > h3 > a#video-title"
+          const insideVideoDiv = video.querySelector(
+            "div#content > div#container"
+          );
+          const videoTitle = insideVideoDiv.querySelector(
+            "div#meta > h3 > a#video-title"
           ).title;
 
-          const videoThumbnail = video.querySelector(
-            "div#content > div#container > ytd-thumbnail#thumbnail > a#thumbnail > yt-image > img"
+          const videoThumbnail = insideVideoDiv.querySelector(
+            "ytd-thumbnail#thumbnail > a#thumbnail > yt-image > img"
           ).src;
 
           const result = {
