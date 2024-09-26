@@ -30,7 +30,8 @@ const crawler = new PlaywrightCrawler({
         return videoDetail;
       }
     );
-    console.log(videoDetails);
+    // console.log(videoDetails);
+    await Dataset.pushData(videoDetails);
 
     // will get the job done
     // await page.waitForSelector("a#video-title.yt-simple-endpoint");
